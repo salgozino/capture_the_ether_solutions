@@ -1,8 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-web3");
-require("@nomiclabs/hardhat-etherscan");
 
-const { infura_key, mnemonic, etherscanApiKey } = require('./secrets.json');
+const { infura_key, mnemonic } = require('./secrets.json');
 
 task("accounts", "Imprime la lista de cuentas disponibles", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
@@ -34,8 +33,5 @@ module.exports = {
       url: "https://ropsten.infura.io/v3/"+infura_key,
       accounts: { mnemonic },
     },
-  },
-  etherscan: {
-    apiKey: etherscanApiKey
-  },
+  }
 };
