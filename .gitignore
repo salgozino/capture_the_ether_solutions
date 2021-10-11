@@ -4,3 +4,5 @@ package-lock.json
 secrets.json
 cache/
 artifacts/
+
+hardhat.config.json
